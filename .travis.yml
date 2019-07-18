@@ -1,0 +1,17 @@
+language: java
+stages:
+  - Build
+  - Compile
+  - name: Deploy
+    if: branch=master
+jobs:
+  include:
+    - stage: Build
+      script: mvn clean install
+    - stage: Compile
+      script: mvn validate && mvn compile
+    - #
+      script: mvn clean test
+    - stage: Deploy
+      script: mvn clean deploy
+      skip_cleanup: true
