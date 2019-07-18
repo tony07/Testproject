@@ -2,16 +2,25 @@ language: java
 stages:
   - Build
   - Compile
-  - name: Deploy
+  - name: Verify
     if: branch=master
+  - name: Deploy
+    if: branch=develop
 jobs:
   include:
     - stage: Build
+      name: "maven: Make a clean install"
       script: mvn clean install
     - stage: Compile
+      name: "maven: Validates & Compiles"
       script: mvn validate && mvn compile
     - #
+      name: "maven: Testing"
       script: mvn clean test
+    - stage: Verify
+      name: "maven: Verifies the code quality"
+      script: mvn verify
     - stage: Deploy
+      name: "Start deploying"
       script: mvn clean deploy
       skip_cleanup: true
