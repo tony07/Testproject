@@ -1,4 +1,4 @@
-package main.java.com.hs.osna.buysomemovies;
+package com.hs.osna.buysomemovies;
 
 import java.io.Serializable;
 import java.rmi.RemoteException;

@@ -1,16 +1,15 @@
-package java.com.hs.osna.buysomemovies;
-
-import main.java.com.hs.osna.buysomemovies.Movie;
-import main.java.com.hs.osna.buysomemovies.MovieManagement;
-import main.java.com.hs.osna.buysomemovies.MovieServer;
-import main.java.com.hs.osna.buysomemovies.UserManagement;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+package com.hs.osna.buysomemovies;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class MovieServerTest {
 	

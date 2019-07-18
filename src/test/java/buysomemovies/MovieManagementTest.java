@@ -1,11 +1,11 @@
-package java.com.hs.osna.buysomemovies;
+package com.hs.osna.buysomemovies;
+
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 
 public class MovieManagementTest {
 

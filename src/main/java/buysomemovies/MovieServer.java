@@ -1,4 +1,4 @@
-package main.java.com.hs.osna.buysomemovies;
+package com.hs.osna.buysomemovies;
 
 import java.rmi.Naming;
 import java.rmi.RemoteException;
@@ -7,12 +7,14 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
+import com.hs.osna.buysomemovies.IMovieServer;
+
 public class MovieServer extends UnicastRemoteObject implements IMovieServer{
 
 	private static UserManagement userManagement = UserManagement.getInstance();
 	private static MovieManagement movieManagement = MovieManagement.getInstance();
 	
-	public MovieServer() throws RemoteException {
+	protected MovieServer() throws RemoteException {
 		System.out.println("MovieServer created...");
 	}
 

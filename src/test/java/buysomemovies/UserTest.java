@@ -1,4 +1,4 @@
-package java.com.hs.osna.buysomemovies;
+package com.hs.osna.buysomemovies;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

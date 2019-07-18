@@ -1,13 +1,14 @@
-package java.com.hs.osna.buysomemovies;
+package com.hs.osna.buysomemovies;
 
-import com.hs.osna.buysomemovies.User;
-import com.hs.osna.buysomemovies.UserManagement;
+import java.rmi.RemoteException;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.rmi.RemoteException;
+import com.hs.osna.buysomemovies.User;
+import com.hs.osna.buysomemovies.UserManagement;
 
 public class UserManagementTest {
 
