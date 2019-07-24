@@ -7,7 +7,7 @@
 	<artifactId>rentamovie</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
-	<sourceDirectory>src/main/java</sourceDirectory>
+		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -36,6 +36,16 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<configuration>
+					<appName>young-cliffs-7506</appName>
+					<processTypes>
+						<java>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</java>
+					</processTypes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
