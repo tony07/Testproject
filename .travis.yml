@@ -11,7 +11,7 @@ stages:
 jobs:
   include:
     - stage: Build
-      name: "maven: Make a clean install"
+      name: "maven: Make a clean install jacoco:report"
       script: mvn clean install
     - stage: Compile
       name: "maven: Validates & Compiles"
